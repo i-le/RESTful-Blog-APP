@@ -1,0 +1,19 @@
+i.icon {
+    font-size: 2em;
+}
+
+.ui.segment:last-child {
+    margin-top: 7em;
+}
+
+#delete {
+    display: inline;
+}
+
+.ui.top.attached.segment {
+    margin-top: 3em;
+}
+
+.ui.huge.header {
+    text-align: center;
+}

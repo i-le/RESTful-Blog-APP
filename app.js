@@ -6,7 +6,11 @@ express = require('express'),
 methodOverride = require('method-override'),
 app = express();
 
-mongoose.connect("mongodb://localhost:27017/blogapp", { 
+
+console.log(process.env.DATABASEURL)
+
+//mongodb://localhost:27017/blogapp
+mongoose.connect(process.env.DATABASEURL, { 
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true
@@ -73,4 +77,6 @@ app.delete("/blogs/:id", (req, res) => {
     })
 })
 
-app.listen(27017)
+app.listen(process.env.PORT || 27017, process.env.IP, function() {
+    console.log("db start")
+})
